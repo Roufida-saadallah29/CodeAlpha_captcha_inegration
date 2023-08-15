@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <!-- Page Meta Tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename = 'images/favicon/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename = 'images/favicon/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename = 'images/favicon/favicon.png')}}">
+    <link rel="mask-icon" href="{{url_for('static', filename = 'images/favicon/favicon.png')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/libs.bundle.css')}}"/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/theme.bundle.css')}}" />
+    <!-- Fix for custom scrollbar if JS is disabled-->
+    <noscript>
+        <style>
+          /**
+          * Reinstate scrolling for non-JS clients
+          */
+          .simplebar-content-wrapper {
+            overflow: auto;
+          }
+        </style>
+    </noscript>
+
+    <!-- Page Title -->
+    <title> Sirius Net</title>
+    
+</head>
+<body class="">
+
+  <!-- Main Section-->
+  <section class="d-flex justify-content-center align-items-start vh-100 py-5 px-3 px-md-0">
+
+    <!-- Login Form-->
+    <div class="d-flex flex-column w-100 align-items-center">
+
+      <!-- Logo-->
+      
+      <div class="shadow-lg rounded p-4 p-sm-5 bg-white form">
+        <h5 class="fw-bold text-muted">Login</h5>
+        <p class="text-muted">Welcome back!</p>
+
+        <!-- Login Form-->
+        <form class="mt-4" action="/login" method="POST">
+          <div class="form-group">
+            <label class="form-label form-label-light" for="login-email">Email address</label>
+            <input type="email" class="form-control form-control-light" id="login-email" placeholder="name@email.com" name="email">
+          </div>
+          <div class="form-group">
+            <label for="login-password" class="form-label form-label-light d-flex justify-content-between align-items-center">
+              Password
+
+            </label>
+            <input type="password" name="password" class="form-control form-control-light" id="login-password" placeholder="Enter your password">
+          </div>
+          <div class="g-recaptcha"
+            data-sitekey="6LcYY4AnAAAAANgsiq2hS2r9K-eAoA05CLxq7ABB">
+          </div>
+          <button type="submit" class="btn btn-primary d-block w-100 my-4">Login</button>
+        </form>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>  
+
+        <!-- / Login Form -->
+
+      </div>
+    </div>
+    <!-- / Login Form-->
+
+  </section>
+
+
+</body>
+
+</html>
